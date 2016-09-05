@@ -7,6 +7,7 @@ let cr = '\n'
 
 module.exports = function (port) {
   let results = {}
+  let stdout
 
   switch (platform) {
     case 'win32':
@@ -42,7 +43,7 @@ module.exports = function (port) {
 
     case 'linux':
     case 'darwin':
-      let stdout = exec('lsof -i :' + port).toString().trim().split('\n')
+      stdout = exec('lsof -i :' + port).toString().trim().split('\n')
       stdout.shift()
 
       stdout.forEach(row => {

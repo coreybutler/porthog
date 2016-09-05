@@ -1,5 +1,14 @@
 # porthog
 
+<table>
+  <tr>
+    <td>OSX & Linux</td><td><img src="https://travis-ci.org/coreybutler/porthog.svg?branch=master"/></td>
+  </tr>
+  <tr>
+    <td>Windows</td><td><img src="https://ci.appveyor.com/api/projects/status/9bno1artnhr9r45o"/></td>
+  </tr>
+</table>
+
 This module identifies which application is using the specified
 port, providing the process name and PID. Works for Windows, OSX, and most flavors of Unix that support the `lsof` operation.
 

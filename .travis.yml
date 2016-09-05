@@ -4,10 +4,6 @@ node_js:
 os:
   - linux
   - osx
-  - windows
-matrix:
-  allow_failures:
-    - os: linux
 deploy:
   provider: npm
   email: corey@coreybutler.com
