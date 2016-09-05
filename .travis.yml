@@ -1,0 +1,18 @@
+language: node_js
+node_js:
+- '6.0.0'
+os:
+  - linux
+  - osx
+  - windows
+matrix:
+  allow_failures:
+    - os: linux
+deploy:
+  provider: npm
+  email: corey@coreybutler.com
+  api_key:
+    secure: U5B2k7e9rHrR8eX34Xs36MHChqYDHCA/gdq38kLaXlkuJqsMqWPooeWr4wtxRGxPMkDqbYWKgGfPP7puASTKpJ/KHM0HwNv0eS3Rq3StRsjkRC26A2u4s6N9F1lQJim1J/Ju4UVuU2Yup8Z5o8lCGeZvpsinTP957+Hmc55LsSI=
+  on:
+    tags: true
+    repo: coreybutler/porthog
