@@ -3,7 +3,7 @@
 This module identifies which application is using a specified
 port, providing the process name and PID. Works for Windows, OSX, and most flavors of Unix that support the `lsof` operation.
 
-<div style="display: flexbox; flex-direction: row;">
+<div style="display: flex; flex-direction: row;">
   <table>
     <tr>
       <td>OSX & Linux</td><td><img src="https://travis-ci.org/coreybutler/porthog.svg?branch=master"/></td>
@@ -16,8 +16,6 @@ port, providing the process name and PID. Works for Windows, OSX, and most flavo
   <img src="https://cdn.rawgit.com/feross/standard/master/badge.svg"/>
   </a>
 </div>
-
-[![JavaScript Style Guide]()]()
 
 **Install**
 
