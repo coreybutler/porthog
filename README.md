@@ -12,6 +12,10 @@
 This module identifies which application is using the specified
 port, providing the process name and PID. Works for Windows, OSX, and most flavors of Unix that support the `lsof` operation.
 
+**Install**
+
+`npm install porthog`
+
 **Example**
 
 ```js
