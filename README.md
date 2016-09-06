@@ -22,11 +22,7 @@ port, providing the process name and PID. Works for Windows, OSX, and most flavo
   </table>
 </div>
 
-**Install**
-
-`npm install porthog`
-
-**Example**
+## Implementation Example
 
 ```js
 const porthog = require('porthog')
@@ -38,7 +34,7 @@ console.log(data.user, 'is running' data.process + ' (PID ' + data.pid + ') on p
 // cbutler is running node.exe (PID 656) on port 80.
 ```
 
-**This operation may require elevated/root privileges.**
+_This operation may require elevated/root privileges._
 
 ## Uses
 
