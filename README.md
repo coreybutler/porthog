@@ -3,16 +3,21 @@
 This module identifies which application is using a specified
 port, providing the process name and PID. Works for Windows, OSX, and most flavors of Unix that support the `lsof` operation.
 
-<table>
-  <tr>
-    <td>OSX & Linux</td><td><img src="https://travis-ci.org/coreybutler/porthog.svg?branch=master"/></td>
-  </tr>
-  <tr>
-    <td>Windows</td><td><img src="https://ci.appveyor.com/api/projects/status/9bno1artnhr9r45o"/></td>
-  </tr>
-</table>
+<div style="display: flexbox; flex-direction: row;">
+  <table>
+    <tr>
+      <td>OSX & Linux</td><td><img src="https://travis-ci.org/coreybutler/porthog.svg?branch=master"/></td>
+    </tr>
+    <tr>
+      <td>Windows</td><td><img src="https://ci.appveyor.com/api/projects/status/9bno1artnhr9r45o"/></td>
+    </tr>
+  </table>
+  <a href="https://github.com/feross/standard" target="_blank">
+  <img src="https://cdn.rawgit.com/feross/standard/master/badge.svg"/>
+  </a>
+</div>
 
-[![JavaScript Style Guide](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
+[![JavaScript Style Guide]()]()
 
 **Install**
 
