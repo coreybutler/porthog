@@ -14,6 +14,10 @@ port, providing the process name and PID. Works for Windows, OSX, and most flavo
 
 [![JavaScript Style Guide](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
 
+**Install**
+
+`npm install porthog`
+
 **Example**
 
 ```js
