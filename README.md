@@ -12,6 +12,9 @@ port, providing the process name and PID. Works for Windows, OSX, and most flavo
           <img src="https://cdn.rawgit.com/feross/standard/master/badge.svg"/>
         </a>
       </td>
+      <td rowspan="2">
+        <a href="https://npmjs.org/package/porthog" target="_blank"><img src="https://nodei.co/npm/porthog.png"/></a>
+      </td>
     </tr>
     <tr>
       <td>Windows</td><td><img src="https://ci.appveyor.com/api/projects/status/9bno1artnhr9r45o"/></td>
