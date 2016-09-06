@@ -3,24 +3,23 @@
 This module identifies which application is using a specified
 port, providing the process name and PID. Works for Windows, OSX, and most flavors of Unix that support the `lsof` operation.
 
-<div style="display: flex; flex-direction: row;">
-  <table>
-    <tr>
-      <td>OSX & Linux</td><td><img src="https://travis-ci.org/coreybutler/porthog.svg?branch=master"/></td>
-      <td rowspan="2">
-        <a href="https://github.com/feross/standard" target="_blank">
-          <img src="https://cdn.rawgit.com/feross/standard/master/badge.svg"/>
-        </a>
-      </td>
-      <td rowspan="2">
-        <a href="https://npmjs.org/package/porthog" target="_blank"><img src="https://nodei.co/npm/porthog.png"/></a>
-      </td>
-    </tr>
-    <tr>
-      <td>Windows</td><td><img src="https://ci.appveyor.com/api/projects/status/9bno1artnhr9r45o"/></td>
-    </tr>
-  </table>
-</div>
+<table>
+  <tr>
+    <td>OSX & Linux</td><td><img src="https://travis-ci.org/coreybutler/porthog.svg?branch=master"/></td>
+    <td rowspan="2">
+      <a href="https://github.com/feross/standard" target="_blank">
+        <img src="https://cdn.rawgit.com/feross/standard/master/badge.svg"/>
+      </a>
+    </td>
+    <td rowspan="2">
+      <a href="https://npmjs.org/package/porthog" target="_blank"><img src="https://nodei.co/npm/porthog.png"/></a>
+    </td>
+  </tr>
+  <tr>
+    <td>Windows</td><td><img src="https://ci.appveyor.com/api/projects/status/9bno1artnhr9r45o"/></td>
+  </tr>
+</table>
+
 
 ## Implementation Example
 
