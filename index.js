@@ -53,9 +53,13 @@ module.exports = function (port) {
         if (!isNaN(processport)) {
           processport = parseInt(processport, 10)
 
+          let title = exec('ps axco pid,command | grep ' + item[1]).toString().split(' ')
+          title.shift()
+          title = title.join(' ')
+
           if (processport === port) {
             results[item[1]] = {
-              process: item[0],
+              process: title,
               user: item[2]
             }
           }

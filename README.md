@@ -1,5 +1,8 @@
 # porthog
 
+This module identifies which application is using a specified
+port, providing the process name and PID. Works for Windows, OSX, and most flavors of Unix that support the `lsof` operation.
+
 <table>
   <tr>
     <td>OSX & Linux</td><td><img src="https://travis-ci.org/coreybutler/porthog.svg?branch=master"/></td>
@@ -9,8 +12,7 @@
   </tr>
 </table>
 
-This module identifies which application is using the specified
-port, providing the process name and PID. Works for Windows, OSX, and most flavors of Unix that support the `lsof` operation.
+[![JavaScript Style Guide](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
 
 **Example**
 
