@@ -27,7 +27,7 @@ port, providing the process name and PID. Works for Windows, OSX, and most flavo
 const porthog = require('porthog')
 const data = porthog(80)
 
-console.log(data.user, 'is running' data.process + ' (PID ' + data.pid + ') on port 80.')
+console.log(data.user, 'is running', data.process + ' (PID ' + data.pid + ') on port 80.')
 
 // Output
 // cbutler is running node.exe (PID 656) on port 80.
