@@ -20,8 +20,22 @@ port, providing the process name and PID. Works for Windows, OSX, and most flavo
   </tr>
 </table>
 
+## CLI Implementation
 
-## Implementation Example
+`npm install -g porthog`
+
+`porthog 33649 80`
+
+Outputs:
+
+```sh
+PORT      PID       PROCESS
+--------------------------------------------------
+33649     43580     node-webkit Helper (cbutler)
+8081      -         -
+```
+
+## API Implementation Example
 
 ```js
 const porthog = require('porthog')

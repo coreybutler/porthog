@@ -43,13 +43,22 @@ module.exports = function (port) {
 
     case 'linux':
     case 'darwin':
-      stdout = exec('lsof -i :' + port).toString().trim().split('\n')
+      try {
+        stdout = exec('lsof -i :' + port).toString().trim().split('\n')
+        if (stdout.length === 0) {
+          break
+        }
+      } catch (e) {
+        break
+      }
+
       stdout.shift()
 
       stdout.forEach(row => {
         let item = row.split(/\s{1,500}/)
         item.pop()
         let processport = item.pop().replace(/[^0-9]/gi, '')
+
         if (!isNaN(processport)) {
           processport = parseInt(processport, 10)
 
@@ -57,7 +66,7 @@ module.exports = function (port) {
           title.shift()
           title = title.join(' ')
 
-          if (processport === port) {
+          if (processport === parseInt(port, 10)) {
             results[item[1]] = {
               process: title,
               user: item[2]

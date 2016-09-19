@@ -6,6 +6,9 @@
   "scripts": {
     "test": "tape test/**/*.js | tap-spec && snazzy --verbose"
   },
+  "bin": {
+    "porthog": "cli.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/coreybutler/porthog.git"
