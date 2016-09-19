@@ -66,11 +66,9 @@ module.exports = function (port) {
           title.shift()
           title = title.join(' ')
 
-          if (processport === parseInt(port, 10)) {
-            results[item[1]] = {
-              process: title,
-              user: item[2]
-            }
+          results[item[1]] = {
+            process: processport === parseInt(port, 10) ? title : item[0],
+            user: item[2]
           }
         }
       })
