@@ -12,7 +12,11 @@ module.exports = function (port) {
   switch (platform) {
     case 'win32':
       cr = '\r' + cr
-      stdout = exec('netstat -aon | findstr :' + port + ' | findstr LISTENING').toString().trim().split(cr)
+      try {
+        stdout = exec('netstat -aon | findstr :' + port + ' | findstr LISTENING').toString().trim().split(cr)
+      } catch (e) {
+        stdout = []
+      }
 
       stdout.forEach((row) => {
         let item = row.trim().split(/\s{1,500}/)
@@ -21,7 +25,7 @@ module.exports = function (port) {
         if (!isNaN(processport)) {
           processport = parseInt(processport, 10)
 
-          if (processport === port) {
+          if (processport === parseInt(port, 10)) {
             results[item.pop()] = {}
           }
         }

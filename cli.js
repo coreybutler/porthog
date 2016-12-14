@@ -41,7 +41,7 @@ data.forEach(item => {
   for (let i = 0; i < (10 - item.pid.length); i++) {
     str = str + ' '
   }
-  str = str + item.process.replace(/\n{1,10}/, '') + (item.user.trim().length > 0 ? ' (' + item.user + ')' : '')
+  str = str + item.process.replace(/\n{1,10}/, '') + (item.user.trim().length > 0 ? ' (' + item.user + (item.user.trim().toLowerCase() === 'unknown' ? ' User' : '') + ')' : '')
 
   console.log(str)
 })
