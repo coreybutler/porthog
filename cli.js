@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+
 'use strict'
 
 let args = process.argv.splice(2, process.argv.length)
