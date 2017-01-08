@@ -59,20 +59,22 @@ module.exports = function (port) {
       stdout.shift()
 
       stdout.forEach(row => {
-        let item = row.split(/\s{1,500}/)
-        item.pop()
-        let processport = item.pop().replace(/[^0-9]/gi, '')
+        if (row.indexOf('(LISTEN)') > 0) {
+          let item = row.split(/\s{1,500}/)
+          item.pop()
+          let processport = item.pop().replace(/[^0-9]/gi, '')
 
-        if (!isNaN(processport)) {
-          processport = parseInt(processport, 10)
+          if (!isNaN(processport)) {
+            processport = parseInt(processport, 10)
 
-          let title = exec('ps axco pid,command | grep ' + item[1]).toString().split(' ')
-          title.shift()
-          title = title.join(' ')
+            let title = exec('ps axco pid,command | grep ' + item[1]).toString().split(' ')
+            title.shift()
+            title = title.join(' ')
 
-          results[item[1]] = {
-            process: processport === parseInt(port, 10) ? title : item[0],
-            user: item[2]
+            results[item[1]] = {
+              process: processport === parseInt(port, 10) ? title : item[0],
+              user: item[2]
+            }
           }
         }
       })
@@ -85,6 +87,7 @@ module.exports = function (port) {
   }
 
   let pids = Object.keys(results)
+
   switch (pids.length) {
     case 0:
       return null
