@@ -13,6 +13,7 @@ test('Basic Test', function (t) {
   server.listen(0, () => {
     let data = porthog(server.address().port)
     t.ok(data !== null, 'Identified a port in use.')
+console.log(data)
     t.ok(data.process.indexOf('node') >= 0, 'Proper process name recognized (node).')
     t.ok(data.pid.trim().length > 0, 'A PID was identified.')
     t.ok(data.user.trim().length > 0, 'A username was provided.')
