@@ -2,8 +2,7 @@
 
 const os = require('os')
 const platform = os.platform()
-const exec = require('child_process').execSync
-let cr = '\n'
+const parser = require('./lib/parser')
 
 module.exports = function (port) {
   let results = {}
@@ -11,74 +10,15 @@ module.exports = function (port) {
 
   switch (platform) {
     case 'win32':
-      cr = '\r' + cr
-      try {
-        stdout = exec('netstat -aon | findstr :' + port + ' | findstr LISTENING').toString().trim().split(cr)
-      } catch (e) {
-        stdout = []
-      }
-
-      stdout.forEach((row) => {
-        let item = row.trim().split(/\s{1,500}/)
-        let processport = item[1].split(':').pop()
-
-        if (!isNaN(processport)) {
-          processport = parseInt(processport, 10)
-
-          if (processport === parseInt(port, 10)) {
-            results[item.pop()] = {}
-          }
-        }
-      })
-
-      Object.keys(results).forEach((pid) => {
-        let out = exec('tasklist /FI \"PID eq ' + pid + '\" /FO CSV /NH /V').toString().trim().split(cr)
-        out.forEach((row) => {
-          let col = row.split(',')
-
-          results[pid] = {
-            process: col[0].substr(1, col[0].length - 2),
-            user: col[6].substr(1, col[6].length - 2)
-          }
-        })
-      })
-
+      results = parser.windows(port)
       break
 
     case 'linux':
+      results = parser.linux(port)
+      break
+
     case 'darwin':
-      try {
-        stdout = exec('lsof -i :' + port).toString().trim().split('\n')
-        if (stdout.length === 0) {
-          break
-        }
-      } catch (e) {
-        break
-      }
-
-      stdout.shift()
-
-      stdout.forEach(row => {
-        if (row.indexOf('(LISTEN)') > 0) {
-          let item = row.split(/\s{1,500}/)
-          item.pop()
-          let processport = item.pop().replace(/[^0-9]/gi, '')
-
-          if (!isNaN(processport)) {
-            processport = parseInt(processport, 10)
-
-            let title = exec('ps axco pid,command | grep ' + item[1]).toString().split(' ')
-            title.shift()
-            title = title.join(' ')
-
-            results[item[1]] = {
-              process: processport === parseInt(port, 10) ? title : item[0],
-              user: item[2]
-            }
-          }
-        }
-      })
-
+      results = parser.lsof(port)
       break
 
     default:
