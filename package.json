@@ -1,6 +1,6 @@
 {
   "name": "porthog",
-  "version": "0.0.8",
+  "version": "1.0.0",
   "description": "Identify which process is using the port you want to use.",
   "main": "index.js",
   "scripts": {

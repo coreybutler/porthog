@@ -6,7 +6,6 @@ const parser = require('./lib/parser')
 
 module.exports = function (port) {
   let results = {}
-  let stdout
 
   switch (platform) {
     case 'win32':
