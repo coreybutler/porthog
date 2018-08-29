@@ -6,7 +6,7 @@ const http = require('http')
 
 test('Basic Test', function (t) {
   const server = http.createServer(function (request, response) {
-    response.writeHead(200, {'Content-Type': 'text/plain'})
+    response.writeHead(200, { 'Content-Type': 'text/plain' })
     response.end('Hello World\n')
   })
 

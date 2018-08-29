@@ -28,14 +28,15 @@
     "node": ">=6.0.0"
   },
   "devDependencies": {
-    "snazzy": "^7.1.1",
     "standard": "^12.0.0",
+    "snazzy": "^8.0.0",
     "tap": "^12.0.1"
   },
   "standard": {
     "ignore": [
       "_*",
-      "_**/*"
+      "_**/*",
+      "test/**/*"
     ],
     "globals": []
   }
