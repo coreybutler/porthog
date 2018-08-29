@@ -28,7 +28,7 @@
     "node": ">=6.0.0"
   },
   "devDependencies": {
-    "snazzy": "^7.1.1",
+    "snazzy": "^8.0.0",
     "standard": "^11.0.1",
     "tap": "^12.0.1"
   },
