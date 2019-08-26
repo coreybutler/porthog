@@ -25,7 +25,7 @@
   },
   "homepage": "https://github.com/coreybutler/porthog#readme",
   "engines": {
-    "node": ">=6.0.0"
+    "node": ">=8.0.0"
   },
   "devDependencies": {
     "standard": "^12.0.0",
