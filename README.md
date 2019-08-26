@@ -1,24 +1,20 @@
 # porthog
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/coreybutler/porthog.svg)](https://greenkeeper.io/)
-
 This module identifies which application is using a specified
 port, providing the process name and PID. Works for Windows, OSX, and most flavors of Linux/Unix that support the `lsof`, `ss`, or `netstat` operations.
 
 <table>
   <tr>
-    <td>OSX & Linux</td><td><a href"https://travis-ci.org/coreybutler/porthog"><img src="https://travis-ci.org/coreybutler/porthog.svg?branch=master"/></a></td>
+    <td>Windows, macOS, & Linux</td><td><a href"https://travis-ci.org/coreybutler/porthog"><img src="https://travis-ci.org/coreybutler/porthog.svg?branch=master"/></a><br/>
+      <img src="https://badges.greenkeeper.io/coreybutler/porthog.svg"/></td>
     <td rowspan="2">
       <a href="https://github.com/feross/standard" target="_blank">
         <img src="https://cdn.rawgit.com/feross/standard/master/badge.svg"/>
       </a>
     </td>
-    <td rowspan="2">
+    <td>
       <a href="https://npmjs.org/package/porthog" target="_blank"><img src="https://nodei.co/npm/porthog.png"/></a>
     </td>
-  </tr>
-  <tr>
-    <td>Windows</td><td><img src="https://ci.appveyor.com/api/projects/status/9bno1artnhr9r45o"/></td>
   </tr>
 </table>
 
