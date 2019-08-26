@@ -5,8 +5,7 @@ port, providing the process name and PID. Works for Windows, OSX, and most flavo
 
 <table>
   <tr>
-    <td>Windows, macOS, & Linux</td><td><a href"https://travis-ci.org/coreybutler/porthog"><img src="https://travis-ci.org/coreybutler/porthog.svg?branch=master"/></a><br/>
-      <img src="https://badges.greenkeeper.io/coreybutler/porthog.svg"/></td>
+    <td>Windows, macOS, & Linux</td><td><a href"https://travis-ci.org/coreybutler/porthog"><img src="https://travis-ci.org/coreybutler/porthog.svg?branch=master"/></a></td>
     <td rowspan="2">
       <a href="https://github.com/feross/standard" target="_blank">
         <img src="https://cdn.rawgit.com/feross/standard/master/badge.svg"/>
